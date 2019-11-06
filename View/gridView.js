@@ -10,14 +10,16 @@ class GridView {
   }
 
   show(){
-    let x = width / columns;
-    let y = height / rows;
+    let x = width / this.columns;
+    let y = height / this.rows;
 
     for(let i=0;i<width; i=i+x){ //draw columns
+      stroke(200);
       line(i, 0, i, width);
     }
 
     for(let j=0;j<height;j=j+y){ //draw rows
+      stroke(200);
       line(0, j, width, j);
     }
   }
