@@ -5,11 +5,10 @@ function setup() {
 	model = new MainModel();
 	view  = new MainView(model);
 	controller = new MainController(model, view);
-	model.newSeed();
-
-	createCanvas(model.width, model.height);
-	frameRate(model.fr);
+	createCanvas(model.getWidth(), model.getHeight());
+	frameRate(model.getFrameRate());
 	background(255);
+	model.initArrays();
 	view.renderGrid();
 	draw();
 
@@ -17,7 +16,21 @@ function setup() {
 
 function draw() {
 
-	model.generate(model.oldArr);
-	view.renderCells(model.oldArr);
+	model.generate(model.getArray());
+	view.renderCells(model.getArray());
+
+}
+
+// Event Listeners
+
+function mousePressed() { //pause and resume
+
+	if(model.getRunning()){
+		controller.pause();
+		model.setRunning(false);
+	} else {
+		controller.play();
+		model.setRunning(true);
+	}
 
 }

@@ -1,8 +1,8 @@
 # Game-of-Life
 
-Game of Life pre-work for technical interview.
+Game of Life challenge.
 
-## Design decisions day 1:
+## Initial Design decisions:
 
 I'll be using JavaScript as the language of choice, due to the nature of being able to host a live demo of the finished project.
 
@@ -15,6 +15,12 @@ Based on the requirements for a two-dimensional grid I will be wanting to have a
 
 The Model-View-Controller pattern would work well for this as the data is constantly updating the view at each iteration.
 
-Assumption: The user will want to create their own game seeds so this is where the controller aspect will become relevant.
+## Assumptions: 
+
+A randomised initial game seed will be sufficient to showcase the properties of the Game of Life.
+
+## Future additions/ wants:
+
+More user control of inital inputs and variables, such as the game seed and constants like frame rate or grid size.
 
 
