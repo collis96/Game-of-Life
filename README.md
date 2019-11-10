@@ -2,6 +2,8 @@
 
 Game of Life challenge.
 
+Live demo: https://jackcprojects.co.uk/game-of-life/game-of-life.html
+
 ## Initial Design decisions:
 
 I'll be using JavaScript as the language of choice, due to the nature of being able to host a live demo of the finished project.
